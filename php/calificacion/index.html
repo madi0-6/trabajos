@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AREA DEL CIRCULO</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+    <center>
+        <main class="card p-4 w-25 m-auto mt-5">
+            <h1 class="h1 mb-3 fw-normal bg-danger text-white">CALIFICACION</h1>
+            <div class="card mb-3" m-auto p-2>
+    <h3></h3>
+
+    <input type="range" min="5" max="10" value="5" id="radio" ><h4 style="color: blue;" id="vradio">5</h4>
+   </div>
+   <div class="card mb-3" m-auto p-2>
+    <h3>DESEMPEÑO</h3>
+
+    <h1><b style="color: blue;" id="area">a ver</b></h1>
+</div>
+</main>
+    </center>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
+    <script>
+    
+    let r=document.querySelector("#radio")
+    let vr=document.querySelector("#vradio")
+    let a=document.querySelector("#area")
+
+    r.oninput=()=>{
+    vr.innerHTML=r.value
+
+    let xr=parseFloat(radio.value)
+    let resultado=0
+    if(r.value>=9){
+        a.innerHTML="EXCELENTE"
+    }
+    else if(r.value>=7){
+        a.innerHTML="BUENO"
+    }
+    else if(r.value==6){
+        a.innerHTML="REGULAR"
+    }
+    else if(r.value==5){
+        a.innerHTML="NO SATISFACTORIO"
+    }
+   
+
+    }
+    </script>
+</html>    

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AREA DEL CIRCULO</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+    <center>
+        <main class="card p-4 w-25 m-auto mt-5">
+            <h1 class="h1 mb-3 fw-normal bg-danger text-white">AREA DE UN CIRCULO</h1>
+            <div class="card mb-3" m-auto p-2>
+    <h3>RADIO</h3>
+
+    <input type="range" min="1" max="100" value="1" id="radio" ><h4 style="color: blue;" id="vradio">1</h4>
+</div>
+<div class="card mb-3" m-auto p-2>
+    <h3>AREA</h3>
+
+    <h1><b style="color: blue;" id="area">3.1416</b></h1>
+</div>
+</main>
+    </center>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
+    <script>
+    
+    let r=document.querySelector("#radio")
+    let vr=document.querySelector("#vradio")
+    let a=document.querySelector("#area")
+
+    r.oninput=()=>{
+    vr.innerHTML=r.value
+
+    let xr=parseFloat(radio.value)
+    let resultado=3.1416*(xr*xr)
+    a.innerHTML=resultado.toFixed(2)
+
+    }
+    </script>
+</html>

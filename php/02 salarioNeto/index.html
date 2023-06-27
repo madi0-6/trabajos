@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALARIO NETO</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body >
+    <center>
+        <h1 class="h1 mb-3 fw-normal bg-primary text-white">SALARIO NETO</h1>
+    <hr>
+    <main class="card p-4 w-50 m-auto mt-4">
+        <div style="text-align: center;" class="mb-2" >
+    <table class="table">
+        <thead>
+          <tr class="table table-dark">
+            <th scope="col">TIPO DE EMPLEO</th>
+            <th scope="col">PAGO POR HORA</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider ">
+          <tr>
+            <th scope="row">GERENTE</th>
+            <td>$250</td>
+
+          </tr>
+          <tr>
+            <th scope="row">JEFE</th>
+            <td>$150</td>
+          </tr>
+          <tr>
+            <th scope="row">CAJERO</th>
+            <td>$100</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </main>
+<br><br>
+
+<a name="tema1"></a>
+
+<main class="card p-4 w-25 m-auto mt-4">
+    <form class="text-center">
+      <h1 class="h3 mb-3 fw-normal bg-primary text-white">PARAMETROS</h1>
+  
+      <div class="card mb-3" m-auto p-2>
+        <h2 class="bg-dark text-white">EMPLEO</h2>
+        <select id="empleado" class="form-select" aria-label="Default select example">
+            <option value="1">GERENTE</option>
+            <option value="2">JEFE</option>
+            <option value="3">CAJERO</option>
+        </select>
+      </div>
+
+      <div class="card mb-3" m-auto p-2>
+        <h2 class="bg-primary text-white">HORAS TRABAJADAS</h2>
+        <input type="range" class="form-range" id="horas" value="1" min="1" max="60"><span id="vhoras">1</span>
+      </div>
+
+      <div class="card" m-auto p-2>
+        <h4 class="bg-dark text-white">ANTIGUEDAD EN LA EMPRESA</h4>
+        <input type="range" class="form-range" id="antiguedad" value="1" min="1" max="30"><span id="vanti">1</span>
+      </div>
+
+      <p class="mt-5 mb-3 text-body-secondary">&copy;CECYTEM 2023</p>
+    </form>
+  </main>
+
+  <main class="card p-4 w-75 m-auto mt-4">
+    <div style="text-align: center;" class="mb-2" >
+<table class="table">
+    <thead>
+      <tr class="table table-dark">
+        <th scope="col" colspan="3">PERCEPCIONES</th>
+      </tr>
+    </thead>
+
+    <tbody class="table-group-divider mb-3">
+
+      <tr>
+
+        <th scope="row">SUELDO BASE</th>
+        <td>Horas trabajadas X Pago por hora</td>
+        <td><b style="color:rgb(193, 82, 137)"  id="sueldoBase" >$</b></td>
+      </tr>
+      <tr>
+        <th scope="row">CANASTA BASICA</th>
+        <td>4.5% del SB</td>
+        <td><b style="color:rgb(224, 87, 23)"  id="canasta" >$</b></td>
+      </tr>
+      <tr>
+        <th scope="row">ESTIMULO</th>
+        <td>2% del SB</td>
+        <td><b style="color:rgb(16, 44, 16)"  id="estimulo" >$</b></td>
+      </tr>
+      <tr>
+        <th scope="row">ANTIGUEDAD</th>
+        <td>$200 X Año</td>
+        <td><b style="color:rgb(3, 33, 44)"  id="antiguedades" >$</b></td>
+      </tr>
+      <tr>
+        <th scope="row">EXTRA</th>
+        <td>Horas X 3</td>
+        <td><b style="color:green"  id="extra" >$</b></td>
+      </tr>
+      <tr>
+        <th scope="row" colspan="2">TOTAL</th>
+        <td><b style="color:green"  id="totalper" >$</b></td>
+      </tr>
+    </tbody>
+    <thead>
+        <tr class="table table-dark">
+          <th scope="col" colspan="3">DEDUCCIONES</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider ">
+    <tr>
+        <th scope="row">ISR</th>
+        <td>16% del SB</td>
+        <td><b style="color:rgb(255, 0, 230)"  id="isr" >$</b></td>
+      </tr>
+      <tr>
+        <th scope="row">SERVICIO DE SALUD</th>
+        <td>4.625% del SB</td>
+        <td><b style="color:rgb(0, 255, 76)"  id="servicio" >$</b></td>
+      </tr>
+      <tr>
+        <th scope="row">SINDICATO</th>
+        <td>1% del SB</td>
+        <td><b style="color:rgb(98, 0, 255)"  id="sindicato" >$</b></td>
+      </tr>
+      <tr>
+        <th scope="row">AFORE</th>
+        <td>6.1% del SB</td>
+        <td><b style="color:rgb(255, 247, 0)"  id="afore" >$</b></td>
+      </tr>
+      <tr>
+        <th scope="row">CAPITALIZACION INDIVIDUAL</th>
+        <td>1.4% del SB</td>
+        <td><b style="color:rgb(255, 0, 93)"  id="capi" >$</b></td>
+      </tr>
+      <tr>
+        <th scope="row" colspan="2">TOTAL</th>
+        <td><b style="color:rgb(0, 255, 174)"  id="totalded" >$</b></td>
+      </tr>
+      </tbody>
+      <thead>
+        <tr class="table table-dark">
+          <th scope="col" colspan="3">SALARIO NETO</th>
+        </tr>
+        <tr>
+            <td colspan="3"><h1 id="salarioNeto" style="color:green">$</h1></td>
+        </tr>
+    </thead>
+  </table>
+</div>
+</main>
+
+<main class="card p-4 w-75 m-auto mt-4">
+<button class="btn btn-danger btn-block" id="reiniciar" >REINICIAR</button>
+<a href="#tema1">subir</a>
+</main>
+
+    
+    <script src="../sweet/sweetalert2.all.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
